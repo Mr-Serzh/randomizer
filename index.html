@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Randomizer</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Randomizer</h1>
+      <p class="title-item">Enter a number</p>
+      <div class="number-container">
+        <div class="input-container">
+          <p class="input-label">Min</p>
+          <input class="input-field js-min-input" type="text" />
+        </div>
+        <div class="input">
+          <p class="input-label">Max</p>
+          <input class="input-field js-max-input" type="text" />
+        </div>
+      </div>
+      <div class="result-container">
+        <button class="button result js-rezult-btn">RANDOMIZE NOW!</button>
+        <input class="input-field js-output" type="text" />
+      </div>
+      <button class="button reset js-reset-btn">Reset</button>
+    </div>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
