@@ -10,22 +10,17 @@ maxInputEl.addEventListener('input', maxInput);
 rezultBtnEl.addEventListener('click', rezultBtn);
 resetBtnEl.addEventListener('click', resetBtn);
 
-let minNumber;
-let maxNumber;
+let minNumber = '';
+let maxNumber = '';
+let sameNumber;
 
 function minInput() {
   minNumber = Number.parseInt(minInputEl.value);
-
-  console.log(minNumber);
-
   return minNumber;
 }
 
 function maxInput() {
   maxNumber = Number.parseInt(maxInputEl.value);
-
-  console.log(maxNumber);
-
   return maxNumber;
 }
 
@@ -34,12 +29,13 @@ function rezultBtn() {
     Math.random() * (maxNumber - minNumber) + minNumber,
   );
 
-  console.log(result);
-
-  outputEl.value = result;
-  console.log();
-
-  // console.log(outputEl.textContent);
+  if (sameNumber === result) {
+    return rezultBtn();
+  } else {
+    sameNumber = result;
+    console.log(result);
+    return (outputEl.value = result);
+  }
 }
 
 function resetBtn() {
